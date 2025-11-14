@@ -1,0 +1,21 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.7/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+FAILURE: Build failed with an exception.
+
+* Where:
+Build file '/home/runner/workspace/minecraft-mod/build.gradle' line: 11
+
+* What went wrong:
+A problem occurred evaluating root project 'axmed555-visuals'.
+> Failed to apply plugin 'net.minecraftforge.gradle'.
+   > Found java version 21. Versions 16 and newer are not supported yet.
+     Note: Support for running under Java 16 requires Gradle 7, which will be supported in ForgeGradle 5.
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 12s
