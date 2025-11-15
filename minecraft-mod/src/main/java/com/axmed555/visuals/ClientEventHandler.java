@@ -1,6 +1,7 @@
 package com.axmed555.visuals;
 
 import com.mojang.blaze3d.vertex.PoseStack;
+import com.axmed555.visuals.effects.VisualEffects;
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.MultiBufferSource;
@@ -24,6 +25,10 @@ public class ClientEventHandler {
     private long lastKillTime = 0;
     private Vec3 cachedJumpMotion = null;
     private long lastTrajectoryTick = 0;
+        public ClientEventHandler() {
+        MinecraftForge.EVENT_BUS.register(new VisualEffects());
+    }
+
 
     @SubscribeEvent
     public void onRenderLevelStage(RenderLevelStageEvent event) {
